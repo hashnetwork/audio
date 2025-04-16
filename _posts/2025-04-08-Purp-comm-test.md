@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Communication and Technology
 description: Purposive Communication Test
 summary: True or False, Communication and Technology

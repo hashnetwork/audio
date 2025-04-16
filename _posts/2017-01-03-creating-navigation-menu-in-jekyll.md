@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Creating navigation menu in Jekyll
 description: Using data folder to build Jekyll navigation
 summary: Using data folder to build Jekyll navigation.

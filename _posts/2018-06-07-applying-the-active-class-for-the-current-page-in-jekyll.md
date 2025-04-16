@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Applying the active class for the current page in Jekyll
 description: How to apply the active class for the current page in Jekyll
 summary: How to apply the active class for the current page in Jekyll.

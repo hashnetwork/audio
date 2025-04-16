@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Jekyll reading time without plugins
 description: The reading time indicator for your website
 summary: The reading time indicator for your website.

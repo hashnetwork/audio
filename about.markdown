@@ -1,5 +1,5 @@
 ---
-layout: b7/page
+layout: bulma/page
 title: About
 permalink: /about/
 ---

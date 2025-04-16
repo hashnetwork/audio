@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Page specific assets in Jekyll
 description: How to set a custom CSS or JS for each page
 summary: How to set a custom CSS or JS for each page.

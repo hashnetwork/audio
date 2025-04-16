@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title:  "Welcome to Jekyll!"
 date:   2025-04-05 16:56:57 +0800
 categories: jekyll update

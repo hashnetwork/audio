@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Adding HTTP response headers to a Netlify static website
 description: Increase the security of your Netlify website by adding security headers
 summary: Increase the security of your Netlify website by adding security headers.

@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Syntax highlight with Rouge in Jekyll
 description: Enable syntax highlighting in your site
 summary: Enable syntax highlighting in your site.

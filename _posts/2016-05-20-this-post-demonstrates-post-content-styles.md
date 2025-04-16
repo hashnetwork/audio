@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: "This post demonstrates post content styles"
 categories: junk
 author:

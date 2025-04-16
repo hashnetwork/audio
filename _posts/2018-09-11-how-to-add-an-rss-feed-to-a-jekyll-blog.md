@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: How to add an RSS feed to a Jekyll blog
 description: Generate an Atom (RSS-like) feed of your Jekyll posts
 summary: Generate an Atom (RSS-like) feed of your Jekyll posts.

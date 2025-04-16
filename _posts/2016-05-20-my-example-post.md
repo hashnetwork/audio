@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 author: John Doe
 ---
 

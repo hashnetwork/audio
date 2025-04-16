@@ -1,5 +1,5 @@
 ---
-layout: b7/post
+layout: bulma/post
 title: Disable Jekyll's default syntax highlighter Rouge
 description: How to disable Jekyll's default syntax highlighter
 summary: How to disable Jekyll's default syntax highlighter.
