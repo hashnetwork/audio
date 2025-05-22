@@ -1,0 +1,46 @@
+---
+layout: bulma/base
+title: Artist
+permalink: /artist/
+---
+
+<h1 id="artist-title">Albums by ...</h1>
+<ul id="artist-posts">
+  <li>Loading albums...</li>
+</ul>
+
+<script>
+  const path = window.location.pathname.split('/').filter(Boolean);
+  const slug = path[1]; // ['artist', 'taylor-swift'] → 'taylor-swift'
+
+  if (!slug) {
+    document.getElementById('artist-title').textContent = 'No artist specified.';
+    document.getElementById('artist-posts').innerHTML = '';
+    throw new Error('No artist in URL');
+  }
+
+  const artistName = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  document.getElementById('artist-title').textContent = `Albums by ${artistName}`;
+
+  fetch('/posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const list = document.getElementById('artist-posts');
+      list.innerHTML = '';
+      const filtered = posts.filter(p => p.artist?.toLowerCase() === artistName.toLowerCase());
+
+      if (filtered.length === 0) {
+        list.innerHTML = '<li>No albums found for this artist.</li>';
+      } else {
+        filtered.forEach(post => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${post.url}">${post.title}</a>`;
+          list.appendChild(li);
+        });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('artist-posts').innerHTML = '<li>Error loading albums.</li>';
+    });
+</script>

@@ -26,6 +26,8 @@ plugins:
 paginate: 10
 paginate_path: "/page/:num/"
 
+permalink: pretty
+
 collections:
   artists:
     output: true

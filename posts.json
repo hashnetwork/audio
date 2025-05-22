@@ -1,0 +1,19 @@
+---
+permalink: /posts.json
+layout: none
+---
+
+[
+  {% assign first = true %}
+  {% for post in site.posts %}
+    {% if post.tags contains "artists" and post.artist %}
+      {% unless first %},{% endunless %}
+      {
+        "title": {{ post.title | jsonify }},
+        "url": {{ post.url | jsonify }},
+        "artist": {{ post.artist | jsonify }}
+      }
+      {% assign first = false %}
+    {% endif %}
+  {% endfor %}
+]

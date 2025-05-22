@@ -1,0 +1,14 @@
+---
+layout: bulma/base
+title: Artists
+---
+
+<h1>All Artists</h1>
+<ul>
+  {% assign artists = site.posts | select: "artist" | reject: "artist", nil | reject: "artist", "" | map: "artist" | uniq | sort %}
+  {% for artist in artists %}
+    <li>
+      <a href="/artist/{{ artist | slugify }}/">{{ artist }}</a>
+    </li>
+  {% endfor %}
+</ul>

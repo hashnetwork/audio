@@ -4,23 +4,13 @@ title: Artists
 permalink: /artist/
 ---
 
-<h1>Artists</h1>
+<h1>Albums by {{ page.artist_name }}</h1>
 
 <ul>
-  {% for artist in site.data.artists %}
-    <li>
-      {{ artist.name }} ({{ artist.count }}) -
-      <a href="#{{ artist.name }}">Posts</a>
-    </li>
+  {% assign artist_posts = site.posts | where: "artist", page.artist_name %}
+  {% for post in artist_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% else %}
+    <li>No albums found.</li>
   {% endfor %}
 </ul>
-
-{% for artist in site.data.artists %}
-  <h2 id="{{ artist.name }}">{{ artist.name }}</h2>
-  <ul>
-    {% assign artist_posts = site.posts | where: "artist", artist.name %}
-    {% for post in artist_posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
